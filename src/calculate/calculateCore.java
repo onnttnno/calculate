@@ -106,7 +106,13 @@ public class calculateCore {
                     break;
                 }
             case 5:
-            	result = numOne+numTwo;
+            	
+            	// calculate mean by adopt SUM 
+            	/*
+            	 * by get value which user want to calculate and divide by number of value
+            	 */
+            	SUM sum2 = new SUM();
+            	result = sum2.compute(numOne,numTwo);
             	String anw = "";
             	int count = 2;
             	do{
@@ -118,14 +124,14 @@ public class calculateCore {
             		do{
             			System.out.println("ENTER Number : ");
             			z = scan.next();
-
             		}while( handy.checkDouble(z) );
             		double num = Double.parseDouble(z);
             		count++;
-            		result = result +num;
+            		result = sum2.compute(result,num);
 
             	}
             	else if(anw.equals("N")){
+            	
             		break;
             	}
             	else{
@@ -134,8 +140,11 @@ public class calculateCore {
             	}
 
             	}while(anw.equals("Y"));
+            	
             	result= result/count;
-						//๋Jirawat Phattarawasitpol @ 20:14 PM, 2 FEB 2017//
+            
+            	break;
+						//เน�Jirawat Phattarawasitpol @ 20:14 PM, 2 FEB 2017//
             case 6:
 							POWER pow = new POWER();
 							result = pow.compute(numOne,numTwo);
@@ -143,7 +152,7 @@ public class calculateCore {
 						case 7:
 							SQUAREROOT squareroot = new SQUAREROOT();
 							if (numTwo == 0) {
-								if (numOne < 0) {
+								if (numOne > 0) {
 									result = squareroot.compute(numOne,numTwo);
 								} else {
 										System.out.println("YOU CAN'T INPUT NEGATIVE NUMBER.");
