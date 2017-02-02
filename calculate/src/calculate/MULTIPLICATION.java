@@ -1,10 +1,10 @@
 package calculate;
 
-public class SUM implements Modeltype{
+public class MULTIPLICATION implements Modeltype{
 
 	public double compute(double numOne, double numTwo) {
 		// TODO Auto-generated method stub
-		return numOne+numTwo;
+		return numOne*numTwo;
 	}
 
 }

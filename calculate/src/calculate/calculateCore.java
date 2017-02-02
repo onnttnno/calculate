@@ -86,10 +86,12 @@ public class calculateCore {
                
                 break;
             case 2:
-                result = numOne-numTwo;
+            	SUBTRACTION subtraction = new SUBTRACTION();
+                result = subtraction.compute(numOne, numTwo);
                 break;
             case 3:
-                result = numOne*numTwo;
+            	MULTIPLICATION multi = new MULTIPLICATION();
+                result = multi.compute(numOne, numTwo);
                 break;
             case 4:
                 if(numTwo==0)//when denominator becomes zero
@@ -98,7 +100,8 @@ public class calculateCore {
                     break;
                 }
                 else{
-                    result=numOne/numTwo;
+                	DIVISION division = new DIVISION();
+                    result= division.compute(numOne, numTwo);
                     break;
                 }
             case 5:
